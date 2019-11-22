@@ -6,5 +6,5 @@ use Illuminate\Database\Eloquent\Model;
 
 class Cotizacion extends Model
 {
-    protected $fillable['nombre','fecha_cotizacion'];
+    protected $fillable = ['nombre','fecha_cotizacion'];
 }
