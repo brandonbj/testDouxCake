@@ -9,7 +9,7 @@
 <!-- Seccion de tarjetas -->
        <section class="post-content-area single-post-area" style="background-color: transparent;">
         <div class="row">
-            <div class="col-3">
+            <div class="col col-md-3">
                 <div class="card">
                    <!-- La si se quiere obtener la imagen desde la base de datos en bits es : src="data:image/jpg;base64, (php base64_encode($producto['Imagen']);) "  --> 
                 <img 
@@ -49,7 +49,7 @@
                 </div>
             </div>
 
-            <div class="col-3">
+            <div class="col col-md-3">
                 <div class="card">
                    <!-- La si se quiere obtener la imagen desde la base de datos en bits es : src="data:image/jpg;base64, (php base64_encode($producto['Imagen']);) "  --> 
                 <img 
@@ -59,7 +59,7 @@
                     src="images/imagenes cupcake/plata.jpg"
                     data-toggle="popover"
                     data-trigger="hover"
-                    data-content="Rico Cupcake de platana relleno del mismo... para saborear"
+                    data-content="Rico Cupcake de platano relleno del mismo... para saborear"
                     height="317px"
                     >
 
@@ -89,7 +89,7 @@
                 </div>
             </div>
 
-            <div class="col-3">
+            <div class=" col col-md-3">
                 <div class="card">
                    <!-- La si se quiere obtener la imagen desde la base de datos en bits es : src="data:image/jpg;base64, (php base64_encode($producto['Imagen']);) "  --> 
                 <img 
@@ -129,7 +129,7 @@
                 </div>
             </div>
 
-            <div class="col-3">
+            <div class="col col-md-3">
                 <div class="card">
                    <!-- La si se quiere obtener la imagen desde la base de datos en bits es : src="data:image/jpg;base64, (php base64_encode($producto['Imagen']);) "  --> 
                 <img 
@@ -173,7 +173,7 @@
         </div>
 
         <div class="row">
-            <div class="col-3">
+            <div class="col col-md-3">
                 <div class="card">
                    <!-- La si se quiere obtener la imagen desde la base de datos en bits es : src="data:image/jpg;base64, (php base64_encode($producto['Imagen']);) "  --> 
                 <img 
@@ -213,7 +213,7 @@
                 </div>
             </div>
 
-            <div class="col-3">
+            <div class="col col-md-3">
                 <div class="card">
                    <!-- La si se quiere obtener la imagen desde la base de datos en bits es : src="data:image/jpg;base64, (php base64_encode($producto['Imagen']);) "  --> 
                 <img 
@@ -253,7 +253,7 @@
                 </div>
             </div>
 
-            <div class="col-3">
+            <div class="col col-md-3">
                 <div class="card">
                    <!-- La si se quiere obtener la imagen desde la base de datos en bits es : src="data:image/jpg;base64, (php base64_encode($producto['Imagen']);) "  --> 
                 <img 
@@ -293,7 +293,7 @@
                 </div>
             </div>
 
-            <div class="col-3">
+            <div class="col col-md-3">
                 <div class="card">
                    <!-- La si se quiere obtener la imagen desde la base de datos en bits es : src="data:image/jpg;base64, (php base64_encode($producto['Imagen']);) "  --> 
                 <img 
@@ -337,7 +337,7 @@
         </div>
 
         <div class="row">
-            <div class="col-3">
+            <div class="col col-md-3">
                 <div class="card">
                    <!-- La si se quiere obtener la imagen desde la base de datos en bits es : src="data:image/jpg;base64, (php base64_encode($producto['Imagen']);) "  --> 
                 <img 
@@ -377,7 +377,7 @@
                 </div>
             </div>
 
-            <div class="col-3">
+            <div class="col col-md-3">
                 <div class="card">
                    <!-- La si se quiere obtener la imagen desde la base de datos en bits es : src="data:image/jpg;base64, (php base64_encode($producto['Imagen']);) "  --> 
                 <img 
@@ -417,7 +417,7 @@
                 </div>
             </div>
 
-            <div class="col-3">
+            <div class="col col-md-3">
                 <div class="card">
                    <!-- La si se quiere obtener la imagen desde la base de datos en bits es : src="data:image/jpg;base64, (php base64_encode($producto['Imagen']);) "  --> 
                 <img 
@@ -457,7 +457,7 @@
                 </div>
             </div>
 
-            <div class="col-3">
+            <div class="col col-md-3">
                 <div class="card">
                    <!-- La si se quiere obtener la imagen desde la base de datos en bits es : src="data:image/jpg;base64, (php base64_encode($producto['Imagen']);) "  --> 
                 <img 
@@ -501,7 +501,7 @@
         </div>
 
         <div class="row">
-            <div class="col-3">
+            <div class="col col-md-3">
                 <div class="card">
                    <!-- La si se quiere obtener la imagen desde la base de datos en bits es : src="data:image/jpg;base64, (php base64_encode($producto['Imagen']);) "  --> 
                 <img 
@@ -541,7 +541,7 @@
                 </div>
             </div>
 
-            <div class="col-3">
+            <div class="col col-md-3">
                 <div class="card">
                    <!-- La si se quiere obtener la imagen desde la base de datos en bits es : src="data:image/jpg;base64, (php base64_encode($producto['Imagen']);) "  --> 
                 <img 

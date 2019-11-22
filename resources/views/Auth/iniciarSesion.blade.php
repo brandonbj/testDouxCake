@@ -1,12 +1,14 @@
-<?php
-include 'global/config.php';
-include 'global/conexion.php';
-include 'includes/carrito.php';
-include 'templetes/cabecera.php';
-?>
-<?php
-if (!isset($_SESSION['user'])) {
-    ?>
+@extends('base')
+@section('title', 'Inicio Sesion')
+@section('content')
+<section class="home-about-area section-gap">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+<!-- Seccion Inicio de Sesion-->
+<section class="post-content-area single-post-area" style="background-color: transparent;">  
+        
+   
     <div class="alert alert-danger" role="alert">
         <h4 class="alert-heading">
             <br>
@@ -16,29 +18,26 @@ if (!isset($_SESSION['user'])) {
         </h4>
         <h1>Iniciar Sesión</h1>
         <div  align="center">
-            <form  class="container" action="includes/validars.php" id="needs-validation" method="post" novalidate>
-                <?php
-                if (isset($errorLogin)) {
-                    echo $errorLogin;
-                }
-                ?>
+            <form  class="container" action="{{ route('login') }}" id="needs-validation" method="post" novalidate>
+                {{ csrf_field() }}
                 <div>
                     <div class="col-md-4 mb-3">
                         <label for="inputUser">Usuario</label>
-                        <input type="text" class="form-control"  name="user" placeholder="Ingrese su usuario" required>
-                        <div class="invalid-feedback">
-                            Ingrese su usuario
-                        </div>
+                        <input type="text" class="input100 text-white  {{ $errors->has('email') ? 'is-danger' : '' }}"  name="user" placeholder="Ingrese su usuario" required value="{{ old('email') }}">
+                        <span class="focus-input100" data-placeholder="&#xe82a;"></span>
+            @if ($errors->has('email'))
+              <p class="text-white">{{ $errors->first('email') }}</p>
+            @endif
                     </div>
 
                     <div class="col-md-4 mb-3">
                         <label for="inputPass">Contraseña</label>
-                        <input type="password" class="form-control" name="pass" placeholder="Ingrese su contraseña" required>
+                        <input type="password" class="input100 text-white {{ $errors->has('password') ? 'is-danger' : '' }}" name="pass" placeholder="Ingrese su contraseña" required value="{{ old('password') }}">
                         <div class="invalid-feedback">
                             Ingrese su contraseña
                         </div>
                         <br>
-                        <small id="mensajePassword" class="form-text text-muted">No comprata su contraseña con nadie...</small>
+                        <small id="mensajePassword" class="form-text text-muted">No compartas tú contraseña con nadie...</small>
                         <br>
                         <button class="btn btn-danger" type="submit">Iniciar Sesión</button>
                         <br>
@@ -52,6 +51,7 @@ if (!isset($_SESSION['user'])) {
         </div>
 
     </div>
+    @section('extra-js')
     <script>
         // Example starter JavaScript for disabling form submissions if there are invalid fields
         (function() {
@@ -69,20 +69,4 @@ if (!isset($_SESSION['user'])) {
             }, false);
         })();
     </script>
-
-<?php
-} else {
-    ?>
-    <br>
-    <br>
-    <br>
-    <div class="alert alert-danger" role="alert">
-        <h4 class="alert-heading">!!Alerta!!</h4>
-        Usted ya ha iniciado sesión...
-    </div>
-<?php
-}
-?>
-<?php
-include 'templetes/pie.php';
-?>
+@endsection

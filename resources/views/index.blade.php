@@ -8,7 +8,7 @@
 <!-- Apartado section descripcion-->								
               <section class="post-content-area single-post-area" style="background-color: transparent;">
               <div class="row">
-                <div class="col col-md-3">
+                <div class="col col-md-4">
                   <div class="card" style="background-color: #EF7CFF;">
                     <div class="card-body" >
   
@@ -18,14 +18,14 @@
                 </div>
                 </div>
                 </div>
-                <div class="col col-md-6">
+                <div class="col col-md-4">
 		
-		            <img  src="images/freshly-baked.png" width="100%">
+		            <img class="img-fluid" src="images/freshly-baked.png">
             
                 </div>
                 
-			<div class="col col-md-3">
-			<div class="card" style="background-color: #EF7CFF;">
+			<div class="col col-md-4">
+			<div class="card" style="background-color: #EF7CFF; padding: inherit;">
                     <div class="card-body" >
 				<h3><span id="result_box2" lang="es">100% hecho en casa</span></h3>
 				<ul>
