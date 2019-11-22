@@ -49,9 +49,19 @@ class RegisterController extends Controller
     protected function validator(array $data)
     {
         return Validator::make($data, [
-            'name' => ['required', 'string', 'max:255'],
-            'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
+            'nombre' => ['required', 'string', 'max:255'],
+            'app' => ['required', 'string', 'max:255'],
+            'apm' => ['required', 'string', 'max:255'],
+            'telefono' => ['required', 'string', 'max:255'],
+            'nickname' => ['required', 'string', 'max:255'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
+            'email' => ['required', 'string', 'email', 'max:255', 'unique:usuarios'],
+            'calle' => ['required', 'string', 'max:255'],
+            'num_int' => ['required', 'string', 'max:255'],
+            'num_ext' => ['required', 'string', 'max:255'],
+            'colonia' => ['required', 'string', 'max:255'],
+            'cp' => ['required', 'integer', 'max:5'],
+            'aviso_privacidad' => ['required', 'boolean'],
         ]);
     }
 
@@ -64,9 +74,20 @@ class RegisterController extends Controller
     protected function create(array $data)
     {
         return User::create([
-            'name' => $data['name'],
-            'email' => $data['email'],
+            
+            'nombre' => $data['nombre'],
+            'app' => $data['app'],
+            'apm' => $data['apm'],
+            'telefono' => $data['telefono'],
+            'nickname' => $data['nickname'],
             'password' => Hash::make($data['password']),
+            'email' => $data['email'],
+            'calle' => $data['calle'],
+            'num_int' => $data['num_int'],
+            'num_ext' => $data['num_ext'],
+            'colonia' => $data['colonia'],
+            'cp' => $data['cp'],
+            'aviso_privacidad' => $data['aviso_privacidad'] ,
         ]);
     }
 }

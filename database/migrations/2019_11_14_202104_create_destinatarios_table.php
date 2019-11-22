@@ -22,7 +22,6 @@ class CreateDestinatariosTable extends Migration
             $table->string('email')->unique();
             $table->string('telefono');
             $table->timestamps();
-            
             $table->foreign('num_pedido')->references('id')->on('pedidos')->onDelete('cascade')->onUpdate('cascade');
         });
     }

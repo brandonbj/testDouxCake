@@ -6,5 +6,5 @@ use Illuminate\Database\Eloquent\Model;
 
 class Ciudad extends Model
 {
-    protected $fillable ['id','ciudad'];
+    protected $fillable = ['id','ciudad'];
 }
