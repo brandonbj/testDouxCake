@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers\Auth;
 
-use App\Http\Controllers\Controller;
 use App\User;
+use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
@@ -28,7 +29,7 @@ class RegisterController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/home';
+    protected $redirectTo = '/index';
 
     /**
      * Create a new controller instance.
@@ -38,6 +39,10 @@ class RegisterController extends Controller
     public function __construct()
     {
         $this->middleware('guest');
+    }
+    public function showLoginForm(){
+        
+        return view('auth.register');
     }
 
     /**
@@ -49,6 +54,9 @@ class RegisterController extends Controller
     protected function validator(array $data)
     {
         return Validator::make($data, [
+            
+            'ciudad'=>['required'],
+            'alcaldia'=>['required'],
             'nombre' => ['required', 'string', 'max:255'],
             'app' => ['required', 'string', 'max:255'],
             'apm' => ['required', 'string', 'max:255'],
@@ -74,7 +82,8 @@ class RegisterController extends Controller
     protected function create(array $data)
     {
         return User::create([
-            
+            'id_ciudad'=>$data['ciudad'],
+            'id_alcaldia'=>$data['alcaldia'],
             'nombre' => $data['nombre'],
             'app' => $data['app'],
             'apm' => $data['apm'],

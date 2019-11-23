@@ -1132,3 +1132,15 @@ h2{
 .footer-social-1 li a:hover, .footer-social li a:focus {
   border-color: #CC3366;
 }
+
+/*----------------------------*\
+	Botones Personalizados
+\*----------------------------*/
+
+#btnini{
+    -webkit-background-image: linear-gradient(left, #D69EFF, #6A00B9);
+    -o-background-image: linear-gradient(left, #D69EFF, #6A00B9);
+    -moz-background-image: linear-gradient(left, #D69EFF, #6A00B9);
+    background-image: linear-gradient( #D69EFF, #6A00B9);
+    border-radius: 8px;
+}
