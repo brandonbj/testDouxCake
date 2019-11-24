@@ -1,8 +1,8 @@
 <?php
 
 namespace App\Http\Controllers\Auth;
-use Auth;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Support\Facades\Redirect;
@@ -28,7 +28,7 @@ class LoginController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/index';
+    protected $redirectTo = '/home';
 
     /**
      * Create a new controller instance.
@@ -45,6 +45,10 @@ class LoginController extends Controller
     
     public function login(Request $request)
     {
+        $credentials=$this->validate(request(),[
+            'email'=>'email|required|string',
+            'password'=>'required|string'
+        ]);
         $credentials = $request->only('email', 'password');
         if (Auth::attempt($credentials)) {
             // Authentication passed...
@@ -55,7 +59,7 @@ class LoginController extends Controller
     }
     
     public function logout(Request $request){
-        Auth:logout();
+        Auth::logout();
         return redirect()->to('/');
         
     }

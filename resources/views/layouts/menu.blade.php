@@ -51,6 +51,14 @@
 			    		<a href="{{route('index')}}"><img src="images/logo.png" alt="Image" width="100" height="60" /></a>		
 						<nav id="nav-menu-container">
 							<ul class="nav-menu">
+							  @if(Auth::guest())
+							  <li  id="iniciarSesion">
+                                <a class="nav-link" href="{{route('login')}}"><img src="images/MENU/INICIARSESION.png" alt="" width="160" height="35"></a>
+                              </li>
+							  <li  id="registro">
+                                <a class="nav-link" href="{{route('register')}}">{{__('Registrate')}}</a>
+                              </li>
+							  @else
 							  <li class="menu-active"><a href="{{route('bienvenidos.index')}}"><img src="images/MENU/INICIO.png" alt="" width="120" height="35"></a>
 							  </li>
 							  <li><a href="{{route('galeria.index')}}"><img src="images/MENU/GALERIA.png" alt="" width="120" height="35"></a>
@@ -59,9 +67,16 @@
 							  </li>					  	      
 							  <li><a href="{{route('conocenos.index')}}"><img src="images/MENU/CONOCENOS.png" alt="" width="120" height="35"></a>
 							  </li>
-							  <li class="menu-active">
-							    <a class="nav-link" href="mostrarCarrito.php">CARRITO()<span class="sr-only">(current)</span></a>
+							  <li>
+							  <form action="{{route('logout')}}" method="post">
+							       @csrf
+							       <button class="btn btn-danger">{{__('Cerrar Sesión')}}</button>
+							  </form>
 							  </li>
+							  <li class="menu-active">
+							    <a class="nav-link" href="#">CARRITO<span class="badge badge-danger">1</span></a>
+							  </li>
+							  @endif
 							</ul>
 						</nav><!-- #nav-menu-container -->		
 			    	</div>

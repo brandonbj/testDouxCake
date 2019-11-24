@@ -1,5 +1,5 @@
 @extends('base')
-@section('title', 'Inicio Sesion')
+@section('title', 'Inicio Sesión')
 @section('content')
 <section class="home-about-area section-gap">
   <div class="container">

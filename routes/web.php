@@ -36,9 +36,4 @@ Route::middleware('auth')->group(function (){
     Route::resource('usuarios','UsuarioController');
     Route::get('/home', 'HomeController@index')->name('home');
 });
-/*
-Route::get('/', function () {
-    return view('index');
-});
-*/
 

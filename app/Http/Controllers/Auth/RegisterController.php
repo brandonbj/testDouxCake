@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers\Auth;
 
-use App\User;
+use App\Models\Usuario;
+use App\Models\Alcaldia;
+use App\Models\Ciudad;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\RegistersUsers;
@@ -29,7 +31,7 @@ class RegisterController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/index';
+    protected $redirectTo = '/home';
 
     /**
      * Create a new controller instance.
@@ -40,9 +42,11 @@ class RegisterController extends Controller
     {
         $this->middleware('guest');
     }
-    public function showLoginForm(){
-        
-        return view('auth.register');
+
+    public function showRegistrationForm(){
+        $alcaldias=Alcaldia::all();
+        $ciudades=Ciudad::all();
+        return view('auth.register',compact('alcaldias','ciudades'));
     }
 
     /**
@@ -54,22 +58,18 @@ class RegisterController extends Controller
     protected function validator(array $data)
     {
         return Validator::make($data, [
-            
-            'ciudad'=>['required'],
-            'alcaldia'=>['required'],
-            'nombre' => ['required', 'string', 'max:255'],
-            'app' => ['required', 'string', 'max:255'],
-            'apm' => ['required', 'string', 'max:255'],
-            'telefono' => ['required', 'string', 'max:255'],
-            'nickname' => ['required', 'string', 'max:255'],
-            'password' => ['required', 'string', 'min:8', 'confirmed'],
-            'email' => ['required', 'string', 'email', 'max:255', 'unique:usuarios'],
-            'calle' => ['required', 'string', 'max:255'],
-            'num_int' => ['required', 'string', 'max:255'],
-            'num_ext' => ['required', 'string', 'max:255'],
-            'colonia' => ['required', 'string', 'max:255'],
-            'cp' => ['required', 'integer', 'max:5'],
-            'aviso_privacidad' => ['required', 'boolean'],
+        'email' => 'required|email|max:255|unique:usuarios',
+        'nickname' => 'required|max:255|unique:usuarios',
+        'password' => 'required|min:8|confirmed',
+        'nombre' => 'required|string|max:255',
+        'app' => 'required|string|max:255',
+        'apm' => 'required|string|max:255',
+        'telefono' => 'required|string|max:12',
+        'calle' => 'required|string|max:255',
+        'num_int' => 'required|string|max:4',
+        'num_ext' => 'required|string|max:4',
+        'colonia' => 'required|string|max:255',
+        'cp' => 'required|integer',
         ]);
     }
 
@@ -81,9 +81,10 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-        return User::create([
+        return Usuario::create([
             'id_ciudad'=>$data['ciudad'],
             'id_alcaldia'=>$data['alcaldia'],
+            'id_tipo_usuario'=>$data['tipo']=1,
             'nombre' => $data['nombre'],
             'app' => $data['app'],
             'apm' => $data['apm'],
@@ -96,7 +97,8 @@ class RegisterController extends Controller
             'num_ext' => $data['num_ext'],
             'colonia' => $data['colonia'],
             'cp' => $data['cp'],
-            'aviso_privacidad' => $data['aviso_privacidad'] ,
+            'aviso_privacidad' => $data['aviso_privacidad']=true
         ]);
     }
+    
 }
