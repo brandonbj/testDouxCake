@@ -1,5 +1,5 @@
 @extends('base')
-@section('title', 'Contactanoss')
+@section('title', 'Contactanos')
 @section('content')
 <div id="body">
     <div id="contact">

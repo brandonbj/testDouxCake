@@ -21,7 +21,7 @@ Route::middleware('auth')->group(function (){
     Route::resource('materias','MateriaPrimaController');
     Route::resource('alcaldias','AlcaldiaController');
     Route::resource('ciudades','CiudadController');
-    Route::resource('pedidos','PedidoController');
+    Route::resource('pedido','PedidoController');
     Route::resource('cotizaciones','CotizacionController');
     Route::resource('destinatarios','DestinatarioController');
     Route::resource('imagens','ImagenController');
@@ -34,11 +34,15 @@ Route::middleware('auth')->group(function (){
     Route::resource('direntregas','DireccionEntregaController');
     Route::resource('cotusus','CotizacionUsuarioController');
     Route::resource('usuarios','UsuarioController');
+    //metodos get
     Route::get('/home', 'HomeController@index')->name('home');
+    Route::get('payment', array(
+        'as' => 'payment',
+        'uses' => 'PaypalController@postPayment',
+    )); 
+    Route::get('payment/status', array(
+        'as' => 'payment.status',
+        'uses' => 'PaypalController@getPaymentStatus',
+    ));
 });
-/*
-Route::get('/', function () {
-    return view('index');
-});
-*/
 

@@ -29,9 +29,10 @@ class CreateUsuariosTable extends Migration
             $table->string('calle');
             $table->string('num_int');
             $table->string('num_ext');
-            $table->string('coloia');
+            $table->string('colonia');
             $table->integer('cp');
             $table->boolean('aviso_privacidad');
+            $table->rememberToken();
             $table->timestamps();
             $table->foreign('id_ciudad')->references('id')->on('ciudads')->onDelete('cascade')->onUpdate('cascade');
             $table->foreign('id_alcaldia')->references('id')->on('alcaldias')->onDelete('cascade')->onUpdate('cascade');

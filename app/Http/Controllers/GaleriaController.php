@@ -3,8 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Galeria;
+use App\Models\Producto;
 use Illuminate\Http\Request;
-
+use Gloudemans\Shoppingcart\Cart;
 class GaleriaController extends Controller
 {
     /**
@@ -14,7 +15,8 @@ class GaleriaController extends Controller
      */
     public function index()
     {
-        return view('Galeria.galeria');
+        $productos = Producto::all();
+        return view('Galeria.galeria',compact('productos'));
     }
 
     /**
@@ -26,16 +28,15 @@ class GaleriaController extends Controller
     {
         //
     }
-
     /**
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $prod)
     {
-        //
+        
     }
 
     /**
@@ -80,6 +81,6 @@ class GaleriaController extends Controller
      */
     public function destroy(Galeria $galeria)
     {
-        //
+        
     }
 }
