@@ -1,0 +1,93 @@
+comandos para la instalacion de laravel en linux
+no importa el sistema operativo recomendable contar con un editor de textos algunas sugerencias son:
+brackets
+sublime text
+code blocks
+php storm
+visual code
+note++
+atom
+etc
+
+
+se necesita de:
+/*apache
+/*php
+/*postgres o mysql
+/*pgadmin o phpmyadmin
+/*composer de manera global
+
+lo primero que tenemos que hacer es
+sudo apt upgrade
+*
+sudo apt update
+*
+sudo apt install apache2
+*
+Despues instalaremos php 
+sudo apt upgrade
+*
+sudo apt update
+*
+sudo apt install php libapache2-mod-php
+*
+sudo systemctl restart apache2
+*
+sudo apt install php-fpm
+*
+system status php7.2-fpm
+Tambien instalaremos postgrest o en su defecto mysql (en esta ocasion sera postgres)
+*
+sudo sh -c 'echo "deb http://apt.postgresql.org/pub/repos/apt/ $(lsb_release -cs)-pgdg main" > /etc/apt/sources.list.d/pgdg.list'
+*
+sudo apt install wget ca-certificates
+*
+wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add –
+*
+sudo apt update
+*
+sudo apt install postgresql-10 pgadmin4 de preferencia instalar pgadmin3 ya que no genera mucho conflicto al instalarlo como el 4
+*
+sudo systemctl status postgresql.service
+*
+para acceder a la cuenta del sistema de postgres es con:
+sudo -i -u postgres
+*
+psql
+*
+postgres=#
+o si bien prefieres acceder de manera mas rapida es con:
+sudo -i -u postgres psql
+nos enviara a:
+postgres=#
+Creacion de un usuario en postgres
+postgres=#CREATE USER usuario PASSWORD 'contraseña';
+y para salir de la terminal de postgres es:
+postgres=#\q
+
+Por ultimo instalaremos composer de manera global:
+sudo apt update
+*
+sudo apt install curl
+*
+curl -sS https://getcomposer.org/installer | php
+*
+sudo mv ~/composer.phar /usr/local/bin/composer
+*
+composer --version
+*
+Con ello crearemos un nuevo proyecto en nuestra carpete donde tendremos nuestros directorios
+composer create-project laravel/laravel nombre_proyecto (la version es opcional sin el asterisco *) *6.0
+
+Instalacion de laravel en Windows
+contar con xampp, wampserver, joomla, etc.
+
+se descarga el archivo exe de composer que otorga su pagina oficial
+https://getcomposer.org/download/
+Dejo un link de un manual de instalacion sencilla y rapida
+https://styde.net/instalacion-de-composer-y-laravel-en-windows/
+
+se instala postgres o mysql 
+pgadmin 4
+cabe mencionar que si cuentas con xammp debes configurar el php.ini para activar el pdo de postgres directamente sobre la configuracion del controlador de xammp
+
