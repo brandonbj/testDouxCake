@@ -14,7 +14,7 @@ class AlcaldiaController extends Controller
      */
     public function index()
     {
-        //
+        
     }
 
     /**
