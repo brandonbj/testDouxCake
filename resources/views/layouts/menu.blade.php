@@ -38,9 +38,9 @@
 				  		<div class="row align-items-center">
 				  			<div class="col-lg-6 col-sm-6 col-4 header-top-left no-padding">
 					      	<div class="menu-social-icons">
-								<a href="https://www.facebook.com/pg/Restaurante-Mexicano-Sabes-Una-Cosa-100901681267851/about/?ref=page_internal" target="_blank"><i class="fa fa-facebook"></i></a>
-								<a href="https://twitter.com/SabesUna_Cosa?fbclid=IwAR2dZEpPRIl8keijIjRllcjXtT_UQrNsjlX9uxo0znubbKAkQdqNOcz0DRk" target="_blank"><i class="fa fa-twitter"></i></a>
-								<a href="https://www.instagram.com/sabesunacosa.restaurante_mex/?igshid=1r1grvhhqixzq&fbclid=IwAR38yi1OjX9phDhQ-U9Ak1LrxhtSbUFAsmnFh0xEyrmgoJYl1WSjOEWznxo" target="_blank"><i class="fa fa-instagram"></i></a>
+								<a href="https://www.facebook.com/pages/Cherry-Cake/1454400394874621?ref=bookmarks" target="_blank"><i class="fa fa-facebook"></i></a>
+								<a href="https://twitter.com/cherry_dayas" target="_blank"><i class="fa fa-twitter"></i></a>
+								<a href="" target="_blank"><i class="fa fa-instagram"></i></a>
 							</div>	    				  					
 				  			</div>
 				  		</div>			  					
@@ -74,7 +74,7 @@
 							  </form>
 							  </li>
 							  <li class="menu-active">
-							    <a class="nav-link" href="#">CARRITO<span class="badge badge-danger">1</span></a>
+							    <a class="nav-link" href="{{route('pedido.index')}}">CARRITO<span class="badge badge-danger">1</span></a>
 							  </li>
 							  @endif
 							</ul>
