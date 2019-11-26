@@ -74,14 +74,16 @@ img {
 	margin: 0 34px;
 }
 #header div {
-	/*background: url(../images/bg-yellow.png) repeat-x */left bottom;
+	/*background: url(../images/bg-yellow.png) repeat-x */
+    /*/left bottom;*/
 	width: 100%;
 }
 #header > div > ul {
 	background: none;
 	height: auto;
 	margin: 0 auto;
-	padding: 22px 0 27px;
+	padding: 15px 0 15px;
+  /*se hace modificacion de 22 a 15 y de 27 a 20*/
 	text-align: center;
 	width: 960px;
 }
@@ -98,7 +100,7 @@ img {
 	font-weight: normal;
 	height: 41px;
 	line-height: 41px;
-	text-align: center;
+	text-align: auto;
 	text-decoration: none;
 	text-transform: capitalize;
 	width: 220px;
@@ -1138,7 +1140,11 @@ h2{
 \*----------------------------*/
 
 #btnini{
-    -webkit-background-image: linear-gradient(left, #D69EFF, #6A00B9);
+  
+    
+    background-image: -webkit-background-image: -webkit-linear-gradient(left, #D69EFF, #6A00B9);
+    background-image: -webkit-background-image: -o-linear-gradient(left, #D69EFF, #6A00B9);
+    background-image: -webkit-background-image: linear-gradient(to right, #D69EFF, #6A00B9);
     -o-background-image: linear-gradient(left, #D69EFF, #6A00B9);
     -moz-background-image: linear-gradient(left, #D69EFF, #6A00B9);
     background-image: linear-gradient( #D69EFF, #6A00B9);

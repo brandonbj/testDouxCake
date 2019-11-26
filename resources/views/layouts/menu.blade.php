@@ -1,83 +1,64 @@
-
-
-           <!-- <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-            <a class="navbar-brand" href="{{route('index')}}" id="logo"><img src="images/logo.png" alt="Image" width="100" height="60"></a>
-            <button class=" navbar-toggler" data-target="#my-nav" data-toggle="collapse" aria-controls="my-nav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div id="my-nav" class="collapse navbar-collapse">
-                <ul class="navbar-nav mr-auto">
-
-                    <li>
-                        <a class="nav-link" href="{{route('bienvenidos.index')}}"><img src="images/MENU/INICIO.png" alt="" width="160" height="35"></a>
-                    </li>
-                    <li>
-                        <a class="nav-link" href="{{route('galeria.index')}}"><img src="images/MENU/GALERIA.png" alt="" width="160" height="35"></a>
-                    </li>
-                    <li>
-                        <a class="nav-link" href="{{route('contactanos.index')}}"><img src="images/MENU/CONTACTANOS.png" alt="" width="160" height="35"></a>
-                    </li>
-                    <li>
-                        <a class="nav-link" href="{{route('conocenos.index')}}"><img src="images/MENU/CONOCENOS.png" alt="" width="160" height="35"></a>
-                    </li>
-                
-                </ul>
-                <ul class="nav justify-content-end">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="mostrarCarrito.php">CARRITO()<span class="sr-only">(current)</span></a>
-                    </li>
-                    
-                </ul>
-            </div>
-        </nav>-->
-        
-        
-        <header id="header" id="home">
+<header id="header" id="home">
 		  		<div class="header-top">
 		  			<div class="container">
-				  		<div class="row align-items-center">
-				  			<div class="col-lg-6 col-sm-6 col-4 header-top-left no-padding">
+				  		<div class="row">
+				  			<div class="col-lg-4 col-sm-6 col-4 header-top-left no-padding">
 					      	<div class="menu-social-icons">
 								<a href="https://www.facebook.com/pages/Cherry-Cake/1454400394874621?ref=bookmarks" target="_blank"><i class="fa fa-facebook"></i></a>
 								<a href="https://twitter.com/cherry_dayas" target="_blank"><i class="fa fa-twitter"></i></a>
 								<a href="" target="_blank"><i class="fa fa-instagram"></i></a>
-							</div>	    				  					
+							</div>				  						    				  					
 				  			</div>
+              	    
+				  			<div class="col-lg-6 col-sm-6 col-8 header-top-right no-padding">
+				  				<a href="{{route('index')}}"><img src="images/logo.png" alt="Image" width="50" height="30" /></a>		
+				  			</div>
+				  			
 				  		</div>			  					
 		  			</div>
           </div>
 			    <div class="container main-menu">
 			    	<div class="row align-items-center justify-content-between d-flex">
-			    		<a href="{{route('index')}}"><img src="images/logo.png" alt="Image" width="100" height="60" /></a>		
+			    				
 						<nav id="nav-menu-container">
 							<ul class="nav-menu">
 							  @if(Auth::guest())
 							  <li  id="iniciarSesion">
-                                <a class="nav-link" href="{{route('login')}}"><img src="images/MENU/INICIARSESION.png" alt="" width="160" height="35"></a>
+                                <a class="nav-link" href="{{route('login')}}"><img src="images/MENU/INICIARSESION.png" alt="" width="100" height="35"></a>
                               </li>
 							  <li  id="registro">
                                 <a class="nav-link" href="{{route('register')}}">{{__('Registrate')}}</a>
                               </li>
 							  @else
-							  <li class="menu-active"><a href="{{route('bienvenidos.index')}}"><img src="images/MENU/INICIO.png" alt="" width="120" height="35"></a>
+							  <li class="menu-active"><a href="{{route('bienvenidos.index')}}"><img src="images/MENU/INICIO.png" alt="" width="100" height="35"></a>
 							  </li>
-							  <li><a href="{{route('galeria.index')}}"><img src="images/MENU/GALERIA.png" alt="" width="120" height="35"></a>
+							  <li><a href="{{route('galeria.index')}}"><img src="images/MENU/GALERIA.png" alt="" width="100" height="35"></a>
 							  </li>
-							  <li class="menu-has-children"><a href="{{route('contactanos.index')}}"><img src="images/MENU/CONTACTANOS.png" alt="" width="120" height="35"></a>
+							  <li class="menu-active"><a href="{{route('contactanos.index')}}"><img src="images/MENU/CONTACTANOS.png" alt="" width="100" height="35"></a>
 							  </li>					  	      
-							  <li><a href="{{route('conocenos.index')}}"><img src="images/MENU/CONOCENOS.png" alt="" width="120" height="35"></a>
-							  </li>
-							  <li>
-							  <form action="{{route('logout')}}" method="post">
-							       @csrf
-							       <button class="btn btn-danger">{{__('Cerrar Sesión')}}</button>
-							  </form>
+							  <li><a href="{{route('conocenos.index')}}"><img src="images/MENU/CONOCENOS.png" alt="" width="100" height="35"></a>
 							  </li>
 							  <li class="menu-active">
-							    <a class="nav-link" href="{{route('pedido.index')}}">CARRITO<span class="badge badge-danger">1</span></a>
+							    <a class="nav-link" href="{{route('pedido.index')}}"><i class="fas fa-shopping-cart"></i>CARRITO<span class="badge badge-danger">1</span></a>
+							  </li>
+							  <li class="menu-has-children">
+                                 <a  href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                    {{ Auth::user()->nickname }} <span class="caret"></span>
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+							    <a  class="dropdown-item" href="{{ route('logout') }}"
+                                       onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                        {{ __('Cerrar Sesión') }}><img src="images/MENU/CERRARSESION.png" alt="" width="100" height="35"></a>
+							    <form action="{{route('logout')}}" method="post" id="logout-form" style="display: none;">
+							       @csrf
+							       
+							  </form>
+                                </div>
 							  </li>
 							  @endif
 							</ul>
+							
 						</nav><!-- #nav-menu-container -->		
 			    	</div>
 			    </div>

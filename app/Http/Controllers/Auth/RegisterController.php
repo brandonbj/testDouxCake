@@ -66,7 +66,7 @@ class RegisterController extends Controller
         'apm' => 'required|string|max:255',
         'telefono' => 'required|string|max:12',
         'calle' => 'required|string|max:255',
-        'num_int' => 'required|string|max:4',
+        'num_int' => 'string|max:4',
         'num_ext' => 'required|string|max:4',
         'colonia' => 'required|string|max:255',
         'cp' => 'required|integer',
