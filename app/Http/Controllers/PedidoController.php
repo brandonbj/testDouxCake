@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Pedido;
+use App\Models\Pedido;
 use Illuminate\Http\Request;
 use Gloudemans\Shoppingcart\Facades\Cart;
 
@@ -16,7 +16,8 @@ class PedidoController extends Controller
      */
     public function index()
     {
-        return view ('Pedido.mostrarCarrito');
+        $pedido=Pedido::all();
+        return view ('Pedido.mostrarCarrito',$pedido);
     }
         /**
      * Show the form for creating a new resource.
@@ -36,14 +37,18 @@ class PedidoController extends Controller
      */
     public function store(Request $request)
     {
-        $add= Cart::add([
-            'id'=>$request->id,
-            'nombre'=>$request->nombre,
-            'cantidad'=>$request->cantidad,
-            'precio'=>$request->precio,
-            ]);
+        
+    }
+     public function delete(Request $r)
+    {
+        Cart::remove($request->id);
+        redirect('/pedido');
     }
 
+    public function getitem(Request $request){
+        Cart::add($request->id,$request->name,$request->price,$request->qty);
+        redirect('/galeria');
+    } 
     /**
      * Display the specified resource.
      *
@@ -84,8 +89,9 @@ class PedidoController extends Controller
      * @param  \App\Alcaldia  $alcaldia
      * @return \Illuminate\Http\Response
      */
-    public function destroy( $alcaldia)
+    public function destroy(Request $r)
     {
-        //
+        Cart::remove($request->id);
+        redirect('/pedido');
     }
 }

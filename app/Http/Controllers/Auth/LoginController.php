@@ -52,7 +52,7 @@ class LoginController extends Controller
         $credentials = $request->only('email', 'password');
         if (Auth::attempt($credentials)) {
             // Authentication passed...
-            return redirect()->intended('index');
+            return redirect()->intended('home');
         }else{
             return Redirect::back()->withInput()->withErrors(array('email'=>'correo o contraseña incorrecto, vuelva a intentarlo' , 'password' =>'correo o contraseña incorrecto, vuelva a intentarlo'));
         }

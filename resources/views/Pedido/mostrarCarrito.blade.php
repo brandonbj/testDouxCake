@@ -10,7 +10,7 @@
                 <div class="col col-md-12">
             <h3>Lista del carrito</h3>
             <!-- Indica la desición para ver si hay productos en el carrito-->
-            @if(Cart::content()!=null)
+            @if(Cart::content()->count()!=0)
             <div class="table-responsive">
                 <table class="table">
                 <tbody>
@@ -29,7 +29,12 @@
                         <td width="20%" class="text-center">{{$row->price}}</td>
                         <td width="20%" class="text-center">{{$row->total}}</td>
                         <td width="5%">
-                            <a href="">{{__('Eliminar')}}</a>
+                           <form action="" method="post">
+                           <input type="hidden" id="id" name="id" value="{{$row->id}}">
+                           @csrf
+                            <button class="btn btn-danger" type="submit">{{__('Eliminar')}}</button>   
+                           </form>
+                            
                             </td>
                     </tr>
                     <!--End Foreach-->
