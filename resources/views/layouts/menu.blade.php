@@ -67,7 +67,7 @@
 							  </li>					  	      
 							  <li><a href="{{route('conocenos.index')}}"><img src="images/MENU/CONOCENOS.png" alt="" width="120" height="35"></a>
 							  </li>
-							  <li>
+							  <li class="menu-active">
 							  <form action="{{route('logout')}}" method="post">
 							       @csrf
 							       <button class="btn btn-danger">{{__('Cerrar Sesión')}}</button>

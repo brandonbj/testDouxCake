@@ -34,6 +34,8 @@ Route::middleware('auth')->group(function (){
     Route::resource('direntregas','DireccionEntregaController');
     Route::resource('cotusus','CotizacionUsuarioController');
     Route::resource('usuarios','UsuarioController');
+    Route::post('galeria','GaleriaController@destroy')->name('galeria');
+    Route::post('pedidos', 'PedidoController@getitem')->name('pedido');
     //metodos get
     Route::get('/home', 'HomeController@index')->name('home');
     Route::get('payment', array(
