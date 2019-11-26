@@ -41,6 +41,7 @@
 							  <li class="menu-active">
 							    <a class="nav-link" href="{{route('pedido.index')}}"><i class="fas fa-shopping-cart"></i>CARRITO<span class="badge badge-danger">1</span></a>
 							  </li>
+<<<<<<< HEAD
 							  <li class="menu-has-children">
                                  <a  href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->nickname }} <span class="caret"></span>
@@ -51,6 +52,10 @@
                                                      document.getElementById('logout-form').submit();">
                                         {{ __('Cerrar Sesión') }}><img src="images/MENU/CERRARSESION.png" alt="" width="100" height="35"></a>
 							    <form action="{{route('logout')}}" method="post" id="logout-form" style="display: none;">
+=======
+							  <li class="menu-active">
+							  <form action="{{route('logout')}}" method="post">
+>>>>>>> 0fc833cf727c95dd9a5debba2f3e3a6ed4fa10b7
 							       @csrf
 							       
 							  </form>

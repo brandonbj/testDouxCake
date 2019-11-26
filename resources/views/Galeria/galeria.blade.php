@@ -26,11 +26,12 @@
                                 <h5 class="card-title">$50.00</h5>
                                 <p class="card-text">Descripción</p>
                                 <h5>Cantidad</h5>
-                                <form action="{{route('pedido')}}" method="post">
+                                <form action="{{url('pedidos')}}" method="post">
+                                @csrf
                                 <input type="hidden" name="id" id="id" value="1">
-                                <input type="hidden" name="nombre" id="nombre" value="cupTest" >
-                                <input type="hidden" name="precio" id="precio" value="50">
-                                <input class="form-control" type="number" id="cantidad" name="cantidad" value="1" id="cantidad" min="1" max="12"> 
+                                <input type="hidden" name="name" id="name" value="cupTest" >
+                                <input type="hidden" name="price" id="price" value="50">
+                                <input class="form-control" type="number" id="qty" name="qty" value="1" min="1" max="12"> 
                                 <br>
                                 <button class="btn btn-danger"
                                     type="submit"
