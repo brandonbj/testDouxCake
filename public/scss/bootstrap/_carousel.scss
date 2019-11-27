@@ -17,7 +17,16 @@
   @include transition($carousel-transition);
   backface-visibility: hidden;
   perspective: 1000px;
+  
 }
+.carousel-item2 {
+  height: 100vh;
+  min-height: 350px;
+  background: no-repeat center center scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 
 .carousel-item.active,
 .carousel-item-next,

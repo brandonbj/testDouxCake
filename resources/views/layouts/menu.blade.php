@@ -27,7 +27,7 @@
                                 <a class="nav-link" href="{{route('login')}}"><img src="images/MENU/INICIARSESION.png" alt="" width="100" height="35"></a>
                               </li>
 							  <li  id="registro">
-                                <a class="nav-link" href="{{route('register')}}">{{__('Registrate')}}</a>
+                                <a class="nav-link" href="{{route('register')}}"><img src="images/MENU/REGISTRO.png" alt="" width="100" height="35"></a>
                               </li>
 							  @else
 							  <li class="menu-active"><a href="{{route('bienvenidos.index')}}"><img src="images/MENU/INICIO.png" alt="" width="100" height="35"></a>
@@ -42,18 +42,23 @@
 							    <a class="nav-link" href="{{route('pedido.index')}}">CARRITO<span class="badge badge-danger">{{Cart::content()->count()}}</span></a>
 							  </li>
 							  <li class="menu-has-children">
-                                 <a  href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    {{ Auth::user()->nickname }} <span class="caret"></span>
-                                </a>
-                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                               <a  href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                    {{ Auth::user()->nickname }} <span class="caret"></span></a>
+                                <ul>
+							      <li>
+                             <!--   <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">-->
 							    <a  class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
-                                        {{ __('Cerrar Sesión') }}><img src="images/MENU/CERRARSESION.png" alt="" width="100" height="35"></a>
-							  <form action="{{route('logout')}}" method="post">
+                                        <img src="images/MENU/CERRARSESION.png" alt="" width="100" height="35"></a>
+							  <form id="logout-form" action="{{route('logout')}}" method="POST">
 							       @csrf
 							  </form>
-                                </div>
+                               <!-- </div>-->
+                                </li>
+                                </ul>
+                                 
+                                
 							  </li>
 							  @endif
 							</ul>

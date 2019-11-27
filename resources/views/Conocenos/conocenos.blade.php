@@ -13,7 +13,7 @@
 			</center>
             <br>
 			<h1> Antecedentes: </h1>
-            <p> Cherry Cake surge a partir de la combinación de ideas y el gusto por la repostería del repostero Luis Cué Ortega, ambos aspectos se fueron materializando poco a poco gracias al esfuerzo y al empeño puesto a través de los años para convertirse en una empresa reconocida a nivel nacional.
+            <p style="text-align: center"> Cherry Cake surge a partir de la combinación de ideas y el gusto por la repostería del repostero Luis Cué Ortega, ambos aspectos se fueron materializando poco a poco gracias al esfuerzo y al empeño puesto a través de los años para convertirse en una empresa reconocida a nivel nacional.
 Iniciaron operaciones el 7 de julio de 1997 en un local de la planta baja del edificio ubicado en Av. Felix Cuevas # 777, en la Col. Del Valle. Al ofrecer Cupcakes innovadores, de calidad y con un excelente sabor casero, se obtuvo el reconocimiento de la comunidad al recomendar nuestros productos entre sus conocidos. Generando con ello un incremento en el número de nuestros clientes y provocando con ello que se alquilara completamente la planta baja del edificio, ello para incrementar la capacidad de producción y brindar un mejor servicio a nuestros clientes.
 		  </p>
 		  </div>

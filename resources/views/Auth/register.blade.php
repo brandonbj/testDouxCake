@@ -21,7 +21,7 @@
                         <div class="col col-md-4">
                             <label for="nombre" class="col-md-6 col-form-label text-md-right">{{ __('Nombre') }}</label>
 
-                            <div class="col-md-10">
+                            <div class="mt-10" >
                                 <input id="nombre" type="text" class="form-control @error('nombre') is-invalid @enderror" name="nombre" value="{{ old('nombre') }}" required autofocus maxlength="30">
 
                                 @error('nombre')
@@ -35,7 +35,7 @@
                         <div class="col col-md-4">
                             <label for="app" class="col-md-6 col-form-label text-md-right">{{ __('Apelldo Paterno') }}</label>
 
-                            <div class="col-md-10">
+                            <div class="mt-10">
                                 <input id="app" type="text" class="form-control @error('app') is-invalid @enderror" name="app" value="{{ old('app') }}" required maxlength="20">
 
                                 @error('app')
@@ -48,7 +48,7 @@
                     <div class="col col-md-4">
                             <label for="apm" class="col-md-6 col-form-label text-md-right">{{ __('Apellido Materno') }}</label>
 
-                            <div class="col-md-10">
+                            <div class="mt-10">
                                 <input id="apm" type="text" class="form-control @error('apm') is-invalid @enderror" name="apm" value="{{ old('apm') }}" required maxlength="20">
 
                                 @error('apm')
@@ -66,7 +66,7 @@
                         <div class="col col-md-4">
                             <label for="email" class="col-md-6 col-form-label text-md-right">{{ __('Correo Electrónico') }}</label>
 
-                            <div class="col-md-10">
+                            <div class="mt-10">
                                 <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required maxlength="80">
 
                                 @error('email')
@@ -80,7 +80,7 @@
                         <div class="col col-md-4">
                             <label for="nickname" class="col-md-6 col-form-label text-md-right">{{ __('Nickname') }}</label>
 
-                            <div class="col-md-10">
+                            <div class="mt-10">
                                 <input id="nickname" type="nickname" class="form-control @error('nickname') is-invalid @enderror" name="nickname" value="{{ old('nickname') }}" required maxlength="20">
 
                                 @error('nickname')
@@ -94,7 +94,7 @@
                         <div class="col col-md-4">
                             <label for="password" class="col-md-6 col-form-label text-md-right">{{ __('Password') }}</label>
 
-                            <div class="col-md-10">
+                            <div class="mt-10">
                                 <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required maxlength="16" min="8">
 
                                 @error('password')
@@ -114,7 +114,7 @@
                         <div class="col col-md-4">
                             <label for="password-confirm" class="col-md-6 col-form-label text-md-right">{{ __('Confirm Password') }}</label>
 
-                            <div class="col-md-10">
+                            <div class="mt-10">
                                 <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required maxlength="16" min="8">
                             </div>
                         </div>
@@ -122,7 +122,7 @@
                         <div class="col col-md-4">
                             <label for="telefono" class="col-md-6 col-form-label text-md-right">{{ __('Telefono') }}</label>
 
-                            <div class="col-md-10">
+                            <div class="mt-10">
                                 <input id="telefono" type="tel" class="form-control @error('telefono') is-invalid @enderror" name="telefono" value="{{ old('telefono') }}" required maxlength="15" min="10">
 
                                 @error('telefono')
@@ -142,7 +142,7 @@
                         <div class="row">
                         <div class="col col-md-4">
                             <label for="name" class="col-md-6 col-form-label text-md-right">{{ __('Ciudad') }}</label>  
-                              <div class="col-md-10">
+                              <div class="mb-30" class="default-select" id="default-select">
                                 <select class="form-control {{ $errors->has('ciudad') ? 'alert-danger' : '' }}" name="ciudad" id="ciudad" required>
                                     <option value="">Seleccione una ciudad</option>
                                     @foreach ($ciudades as $ciudad)
@@ -156,7 +156,7 @@
                         </div>
                         <div class="col col-md-4">
                             <label for="name" class="col-md-6 col-form-label text-md-right">{{ __('Alcaldia') }}</label>  
-                              <div class="col-md-10">
+                              <div class="mb-30">
                                 <select class="form-control {{ $errors->has('alcaldia') ? 'alert-danger' : '' }}" name="alcaldia" id="alcaldia" required>
                                     <option value="">Seleccione una Alcaldía</option>
                                     @foreach ($alcaldias as $alcaldia)
@@ -171,7 +171,7 @@
                         <div class="col col-md-4">
                             <label for="calle" class="col-md-6 col-form-label text-md-right">{{ __('Calle') }}</label>
 
-                            <div class="col-md-10">
+                            <div class="mt-10">
                                 <input id="calle" type="text" class="form-control @error('calle') is-invalid @enderror" name="calle" value="{{ old('calle') }}" required maxlength="40">
 
                                 @error('calle')
@@ -190,7 +190,7 @@
                         <div class="col col-md-4">
                             <label for="num_ext" class="col-md-6 col-form-label text-md-right">{{ __('Número Exterior') }}</label>
 
-                            <div class="col-md-10">
+                            <div class="mt-10">
                                 <input id="num_ext" type="text" class="form-control @error('num_ext') is-invalid @enderror" name="num_ext" value="{{ old('num_ext') }}" required maxlength="5">
 
                                 @error('num_ext')
@@ -204,7 +204,7 @@
                         <div class="col col-md-4">
                             <label for="num_int" class="col-md-6 col-form-label text-md-right">{{ __('Número Interior') }}</label>
 
-                            <div class="col-md-10">
+                            <div class="mt-10">
                                 <input id="num_int" type="text" class="form-control @error('num_int') is-invalid @enderror" name="num_int" value="{{ old('num_int') }}" required maxlength="5">
 
                                 @error('num_int')
@@ -219,7 +219,7 @@
                         <div class="col col-md-4">
                             <label for="colonia" class="col-md-6 col-form-label text-md-right">{{ __('Colonia') }}</label>
 
-                            <div class="col-md-10">
+                            <div class="mt-10">
                                 <input id="colonia" type="text" class="form-control @error('colonia') is-invalid @enderror" name="colonia" value="{{ old('colonia') }}" required maxlength="80">
 
                                 @error('colonia')
@@ -238,7 +238,7 @@
                         <div class="col col-md-4">
                             <label for="cp" class="col-md-6 col-form-label text-md-right">{{ __('Código Postal') }}</label>
 
-                            <div class="col-md-10">
+                            <div class="mt-10">
                                 <input id="cp" type="text" maxlength="5" class="form-control @error('cp') is-invalid @enderror" name="cp" value="{{ old('cp') }}" required>
 
                                 @error('cp')

@@ -227,6 +227,7 @@ $(document).ready(function() {
             }
         }
     });
+  $('.carousel-3d-controls').mdbCarousel3d();
 
 
     //------- Timer Countdown  js --------//  

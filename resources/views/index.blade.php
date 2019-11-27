@@ -7,7 +7,38 @@
       <div class="col-lg-12">
 <!-- Apartado section descripcion-->								
               <section class="post-content-area single-post-area" style="background-color: transparent;">
-              <div class="row">
+               
+               <div class="section-top-border">
+						<div class="row">
+							<div class="col-md-4">
+								<div class="single-defination">
+									<h4 class="mb-20" id="result_box">Todos los días recién horneados.</h4>
+									<p>Atrevete a probar nuestra variedad en sabores y diseños.<br>
+			    Los mejores Cupcakes, Pasteles y Galletas solo los tiene &quot;Cherry Cake&quot;.</p>
+								</div>
+							</div>
+							<div class="col-md-4">
+								<div class="single-defination">
+									<h4 class="mb-20"></h4>
+									<img class="img-fluid" src="images/freshly-baked.png">
+								</div>
+							</div>
+							<div class="col-md-4">
+								<div class="single-defination">
+									<h4 class="mb-20">100% hecho en casa</h4>
+									<ul>
+					                  <li >
+						               <img class="img-fluid" src="images/ham.png" alt="">
+					                  </li>
+					                  <li>
+					                   <img class="img-fluid" src="images/tart.png" alt="">
+                                      </li>
+				                    </ul>
+								</div>
+							</div>
+						</div>
+					</div>
+              <!-- 
                 <div class="col col-md-4">
                   <div class="card" style="background-color: #EF7CFF;">
                     <div class="card-body" >
@@ -39,8 +70,7 @@
                 </div>
                 </div>
 			</div>
-         
-          </div>
+         -->
         </section>
 <!-- Termina apartado de section descripcion-->
         

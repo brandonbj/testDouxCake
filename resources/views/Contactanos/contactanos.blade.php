@@ -9,7 +9,7 @@
             <div class="section">
                 <ul>
                     <li>
-                        <center> <a href="registro.php"><img  src="images/registro.gif" width="278" height="237" ></a>
+                        <center> <a href="{{route('register')}}"><img  src="images/registro.gif" width="278" height="237" ></a>
                         </center>
                         <div class="section">
                             <ul>
