@@ -3,7 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use Gloudemans\Shoppingcart\Facades\Cart;
+use Session;
 class CarritoController extends Controller
 {
         /**
@@ -15,7 +16,23 @@ class CarritoController extends Controller
     {
         
     }
-
+    # Our function for adding a certain product to the cart
+    public function add(Request $r)
+    {
+        $cartItem = Cart::add($r->all());
+        Session::flash('flash_message', 'Producto Agregado');
+        return back();
+    }
+    # Our function for removing a certain product from the cart
+    public function remove(Request $r)
+    {
+        $id =$r->input('id');
+        $rows  = Cart::content();
+        $rowId = $rows->where('id', $id)->first()->rowId;
+        Cart::remove($rowId);
+        
+        return back();
+    }
     /**
      * Show the form for creating a new resource.
      *

@@ -74,7 +74,7 @@
 							  </form>
 							  </li>
 							  <li class="menu-active">
-							    <a class="nav-link" href="{{route('pedido.index')}}">CARRITO<span class="badge badge-danger">1</span></a>
+							    <a class="nav-link" href="{{route('pedido.index')}}">CARRITO<span class="badge badge-danger">{{Cart::content()->count()}}</span></a>
 							  </li>
 							  @endif
 							</ul>

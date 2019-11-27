@@ -24,12 +24,12 @@
                     <!--Inicialice for each  -->
                     @foreach(Cart::content() as $row)
                     <tr>
-                        <td width="40%"><?php echo  $row->name; ?></td>
+                        <td width="40%">{{$row->name}}</td>
                         <td width="15%" class="text-center">{{$row->qty}}</td>
                         <td width="20%" class="text-center">{{$row->price}}</td>
                         <td width="20%" class="text-center">{{$row->total}}</td>
                         <td width="5%">
-                           <form action="" method="post">
+                           <form action="{{url('remove')}}" method="post">
                            <input type="hidden" id="id" name="id" value="{{$row->id}}">
                            @csrf
                             <button class="btn btn-danger" type="submit">{{__('Eliminar')}}</button>   
@@ -40,7 +40,7 @@
                     <!--End Foreach-->
                     @endforeach
                     <tr>
-                        <td colspan="3" align="right"><h3>{{__('Tax')}}</h3> </td>
+                        <td colspan="3" align="right"><h3>{{__('IVA')}}</h3> </td>
                         <td align="right"><h3>{{__('$')}} {{Cart::tax()}}</h3> </td>
                         <td> </td>
                     </tr>
