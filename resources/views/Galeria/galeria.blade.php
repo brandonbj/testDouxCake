@@ -69,26 +69,23 @@
                                     <h5 class="card-title">$25.00</h5>
                                     <p class="card-text">Descripción</p>
                                     <h5>Cantidad</h5>
-                                <form action="" method="post">
-                                <input type="hidden" name="id" id="id" value="">
-                                <input type="hidden" name="nombre" id="nombre" value="" >
-                                <input type="hidden" name="precio" id="precio" value="">
-                                <input class="form-control" type="number" name="cantidad" value="1" id="cantidad" min="1" max="12">   
+                                <form action="{{url('add')}}" method="post">
+                                @csrf
+                                <input type="hidden" name="id" id="id" value="2">
+                                <input type="hidden" name="name" id="name" value="Cupcake de platano" >
+                                <input type="hidden" name="price" id="price" value="25.00">
+                                <input type="hidden" name="weight" id="weight" value="0">
+                                <input class="form-control" type="number" id="qty" name="qty" value="1" min="1" max="12"> 
                                 <br>
                                 <button class="btn btn-danger"
-                                    name="btnAccion"
-                                    value="Agregar"
-                                    type="submit"
+                                   type="submit"
                                     >
-                                    Agragar al carrito
+                                    {{__('Agragar al carrito')}}
                                     </button>
-
                                 </form>
-
-
                                 </div>
                             </div>
-</div>
+                        </div>
 
                         <div class="col col-md-3">
                             <div class="card">
@@ -109,26 +106,25 @@
                                     <h5 class="card-title">$30.00</h5>
                                     <p class="card-text">Descripción</p>
                                     <h5>Cantidad</h5>
-                                <form action="" method="post">
-                                <input type="hidden" name="id" id="id" value="">
-                                <input type="hidden" name="nombre" id="nombre" value="" >
-                                <input type="hidden" name="precio" id="precio" value="">
-                                <input class="form-control" type="number" name="cantidad" value="1" id="cantidad" min="1" max="12">   
+                                <form action="{{url('add')}}" method="post">
+                                @csrf
+                                <input type="hidden" name="id" id="id" value="3">
+                                <input type="hidden" name="name" id="name" value="CupCake de Arandano" >
+                                <input type="hidden" name="price" id="price" value="30.00">
+                                <input type="hidden" name="weight" id="weight" value="0">
+                                <input class="form-control" type="number" id="qty" name="qty" value="1" min="1" max="12"> 
                                 <br>
                                 <button class="btn btn-danger"
-                                    name="btnAccion"
-                                    value="Agregar"
-                                    type="submit"
+                                   type="submit"
                                     >
-                                    Agragar al carrito
+                                    {{__('Agragar al carrito')}}
                                     </button>
-
                                 </form>
 
 
                                 </div>
                             </div>
-</div>
+                        </div>
 
                         <div class="col col-md-3">
                             <div class="card">
@@ -141,37 +137,32 @@
                                 data-toggle="popover"
                                 data-trigger="hover"
                                 data-content="¡Para los amantes del chocolate Cupcake de oreo!"
-                                height="317px"
-                                >
-
+                                height="317px">
                                 <div class="card-body">
                                 <span>CupCake sabor Oreo</span>
                                     <h5 class="card-title">$43.00</h5>
                                     <p class="card-text">Descripción</p>
                                     <h5>Cantidad</h5>
-                                <form action="" method="post">
-                                <input type="hidden" name="id" id="id" value="">
-                                <input type="hidden" name="nombre" id="nombre" value="" >
-                                <input type="hidden" name="precio" id="precio" value="">
-                                <input class="form-control" type="number" name="cantidad" value="1" id="cantidad" min="1" max="12">   
+                                <form action="{{url('add')}}" method="post">
+                                @csrf
+                                <input type="hidden" name="id" id="id" value="4">
+                                <input type="hidden" name="name" id="name" value="CupCake sabor Oreo" >
+                                <input type="hidden" name="price" id="price" value="43.00">
+                                <input type="hidden" name="weight" id="weight" value="0">
+                                <input class="form-control" type="number" id="qty" name="qty" value="1" min="1" max="12"> 
                                 <br>
                                 <button class="btn btn-danger"
-                                    name="btnAccion"
-                                    value="Agregar"
-                                    type="submit"
+                                   type="submit"
                                     >
-                                    Agragar al carrito
+                                    {{__('Agragar al carrito')}}
                                     </button>
-
                                 </form>
-
-
                                 </div>
                             </div>
-</div>
+                        </div>
                     </div>
                     <!-- La si se quiere obtener la imagen desde la base de datos en bits es : src="data:image/jpg;base64, (php base64_encode($producto['Imagen']);) "  --> 
-                        <!--
+                        
                         <div class="row">
                                 <div class="col col-md-3">
                                     <div class="card">
@@ -183,31 +174,25 @@
                                         data-toggle="popover"
                                         data-trigger="hover"
                                         data-content="Para los que les gusta el sabor amargo y a la vez dulce Cupcake de fresa"
-                                        height="317px"
-                                        >
-
+                                        height="317px">
                                         <div class="card-body">
                                         <span>Cupcake de fresa</span>
                                             <h5 class="card-title">$12.00</h5>
                                             <p class="card-text">Descripción</p>
                                             <h5>Cantidad</h5>
-                                        <form action="" method="post">
-                                        <input type="hidden" name="id" id="id" value="">
-                                        <input type="hidden" name="nombre" id="nombre" value="" >
-                                        <input type="hidden" name="precio" id="precio" value="">
-                                        <input class="form-control" type="number" name="cantidad" value="1" id="cantidad" min="1" max="12">   
-                                        <br>
-                                        <button class="btn btn-danger"
-                                            name="btnAccion"
-                                            value="Agregar"
-                                            type="submit"
-                                            >
-                                            Agragar al carrito
+                                        <form action="{{url('add')}}" method="post">
+                                            @csrf
+                                            <input type="hidden" name="id" id="id" value="5">
+                                            <input type="hidden" name="name" id="name" value="Cupcake de fresa" >
+                                            <input type="hidden" name="price" id="price" value="12.00">
+                                            <input type="hidden" name="weight" id="weight" value="0">
+                                            <input class="form-control" type="number" id="qty" name="qty" value="1" min="1" max="12"> 
+                                            <br>
+                                            <button class="btn btn-danger"
+                                               type="submit">
+                                            {{__('Agragar al carrito')}}
                                             </button>
-
                                         </form>
-
-
                                         </div>
                                     </div>
                                 </div>
@@ -223,31 +208,25 @@
                                         data-toggle="popover"
                                         data-trigger="hover"
                                         data-content="Rico Cupcake de platana relleno del mismo... para saborear"
-                                        height="317px"
-                                        >
-
+                                        height="317px">
                                         <div class="card-body">
                                         <span>Cupcake de platano</span>
                                             <h5 class="card-title">$25.00</h5>
                                             <p class="card-text">Descripción</p>
                                             <h5>Cantidad</h5>
-                                        <form action="" method="post">
-                                        <input type="hidden" name="id" id="id" value="">
-                                        <input type="hidden" name="nombre" id="nombre" value="" >
-                                        <input type="hidden" name="precio" id="precio" value="">
-                                        <input class="form-control" type="number" name="cantidad" value="1" id="cantidad" min="1" max="12">   
-                                        <br>
-                                        <button class="btn btn-danger"
-                                            name="btnAccion"
-                                            value="Agregar"
-                                            type="submit"
-                                            >
-                                            Agragar al carrito
+                                       <form action="{{url('add')}}" method="post">
+                                            @csrf
+                                            <input type="hidden" name="id" id="id" value="6">
+                                            <input type="hidden" name="name" id="name" value="Cupcake de platano" >
+                                            <input type="hidden" name="price" id="price" value="25.00">
+                                            <input type="hidden" name="weight" id="weight" value="0">
+                                            <input class="form-control" type="number" id="qty" name="qty" value="1" min="1" max="12"> 
+                                            <br>
+                                            <button class="btn btn-danger"
+                                               type="submit">
+                                            {{__('Agragar al carrito')}}
                                             </button>
-
                                         </form>
-
-
                                         </div>
                                     </div>
                                 </div>
@@ -262,31 +241,25 @@
                                         data-toggle="popover"
                                         data-trigger="hover"
                                         data-content="Rico Cup Cake con sabor a nata solo por temporada limitada"
-                                        height="317px"
-                                        >
-
+                                        height="317px">
                                         <div class="card-body">
                                         <span>CupCake Nata </span>
                                             <h5 class="card-title">$25.00</h5>
                                             <p class="card-text">Descripción</p>
                                             <h5>Cantidad</h5>
-                                        <form action="" method="post">
-                                        <input type="hidden" name="id" id="id" value="">
-                                        <input type="hidden" name="nombre" id="nombre" value="" >
-                                        <input type="hidden" name="precio" id="precio" value="">
-                                        <input class="form-control" type="number" name="cantidad" value="1" id="cantidad" min="1" max="12">   
-                                        <br>
-                                        <button class="btn btn-danger"
-                                            name="btnAccion"
-                                            value="Agregar"
-                                            type="submit"
-                                            >
-                                            Agragar al carrito
+                                        <form action="{{url('add')}}" method="post">
+                                            @csrf
+                                            <input type="hidden" name="id" id="id" value="7">
+                                            <input type="hidden" name="name" id="name" value="CupCake Nata">
+                                            <input type="hidden" name="price" id="price" value="25.00">
+                                            <input type="hidden" name="weight" id="weight" value="0">
+                                            <input class="form-control" type="number" id="qty" name="qty" value="1" min="1" max="12"> 
+                                            <br>
+                                            <button class="btn btn-danger"
+                                               type="submit">
+                                            {{__('Agragar al carrito')}}
                                             </button>
-
                                         </form>
-
-
                                         </div>
                                     </div>
                                 </div>
@@ -309,31 +282,26 @@
                                             <h5 class="card-title">$20.00</h5>
                                             <p class="card-text">Descripción</p>
                                             <h5>Cantidad</h5>
-                                        <form action="" method="post">
-                                        <input type="hidden" name="id" id="id" value="">
-                                        <input type="hidden" name="nombre" id="nombre" value="" >
-                                        <input type="hidden" name="precio" id="precio" value="">
-                                        <input class="form-control" type="number" name="cantidad" value="1" id="cantidad" min="1" max="12">   
-                                        <br>
-                                        <button class="btn btn-danger"
-                                            name="btnAccion"
-                                            value="Agregar"
-                                            type="submit"
-                                            >
-                                            Agragar al carrito
+                                        <form action="{{url('add')}}" method="post">
+                                            @csrf
+                                            <input type="hidden" name="id" id="id" value="8">
+                                            <input type="hidden" name="name" id="name" value="CupCake de Chocolate">
+                                            <input type="hidden" name="price" id="price" value="20.00">
+                                            <input type="hidden" name="weight" id="weight" value="0">
+                                            <input class="form-control" type="number" id="qty" name="qty" value="1" min="1" max="12"> 
+                                            <br>
+                                            <button class="btn btn-danger"
+                                               type="submit">
+                                            {{__('Agragar al carrito')}}
                                             </button>
-
                                         </form>
-
-
                                         </div>
                                     </div>
                                 </div>
 
-
                             </div>
-                        -->
-                        <!--   
+                       
+                          
                         <div class="row">
                                 <div class="col col-md-3">
                                     <div class="card">
@@ -350,23 +318,21 @@
 
                                         <div class="card-body">
                                         <span>CupCake Vegano</span>
-                                            <h5 class="card-title">$30</h5>
+                                            <h5 class="card-title">$30.00</h5>
                                             <p class="card-text">Descripción</p>
                                             <h5>Cantidad</h5>
-                                        <form action="" method="post">
-                                        <input type="hidden" name="id" id="id" value="">
-                                        <input type="hidden" name="nombre" id="nombre" value="" >
-                                        <input type="hidden" name="precio" id="precio" value="">
-                                        <input class="form-control" type="number" name="cantidad" value="1" id="cantidad" min="1" max="12">   
-                                        <br>
-                                        <button class="btn btn-danger"
-                                            name="btnAccion"
-                                            value="Agregar"
-                                            type="submit"
-                                            >
-                                            Agragar al carrito
+                                        <form action="{{url('add')}}" method="post">
+                                            @csrf
+                                            <input type="hidden" name="id" id="id" value="9">
+                                            <input type="hidden" name="name" id="name" value="CupCake Vegano">
+                                            <input type="hidden" name="price" id="price" value="30.00">
+                                            <input type="hidden" name="weight" id="weight" value="0">
+                                            <input class="form-control" type="number" id="qty" name="qty" value="1" min="1" max="12"> 
+                                            <br>
+                                            <button class="btn btn-danger"
+                                               type="submit">
+                                            {{__('Agragar al carrito')}}
                                             </button>
-
                                         </form>
 
 
@@ -392,20 +358,18 @@
                                             <h5 class="card-title">$25.00</h5>
                                             <p class="card-text">Descripción</p>
                                             <h5>Cantidad</h5>
-                                        <form action="" method="post">
-                                        <input type="hidden" name="id" id="id" value="">
-                                        <input type="hidden" name="nombre" id="nombre" value="" >
-                                        <input type="hidden" name="precio" id="precio" value="">
-                                        <input class="form-control" type="number" name="cantidad" value="1" id="cantidad" min="1" max="12">   
-                                        <br>
-                                        <button class="btn btn-danger"
-                                            name="btnAccion"
-                                            value="Agregar"
-                                            type="submit"
-                                            >
-                                            Agragar al carrito
+                                        <form action="{{url('add')}}" method="post">
+                                            @csrf
+                                            <input type="hidden" name="id" id="id" value="10">
+                                            <input type="hidden" name="name" id="name" value="Cupcake de Zanahoria">
+                                            <input type="hidden" name="price" id="price" value="25.00">
+                                            <input type="hidden" name="weight" id="weight" value="0">
+                                            <input class="form-control" type="number" id="qty" name="qty" value="1" min="1" max="12"> 
+                                            <br>
+                                            <button class="btn btn-danger"
+                                               type="submit">
+                                            {{__('Agragar al carrito')}}
                                             </button>
-
                                         </form>
 
 
@@ -431,20 +395,18 @@
                                             <h5 class="card-title">$30.00</h5>
                                             <p class="card-text">Descripción</p>
                                             <h5>Cantidad</h5>
-                                        <form action="" method="post">
-                                        <input type="hidden" name="id" id="id" value="">
-                                        <input type="hidden" name="nombre" id="nombre" value="" >
-                                        <input type="hidden" name="precio" id="precio" value="">
-                                        <input class="form-control" type="number" name="cantidad" value="1" id="cantidad" min="1" max="12">   
-                                        <br>
-                                        <button class="btn btn-danger"
-                                            name="btnAccion"
-                                            value="Agregar"
-                                            type="submit"
-                                            >
-                                            Agragar al carrito
+                                        <form action="{{url('add')}}" method="post">
+                                            @csrf
+                                            <input type="hidden" name="id" id="id" value="11">
+                                            <input type="hidden" name="name" id="name" value="CupCake redvelvet">
+                                            <input type="hidden" name="price" id="price" value="30.00">
+                                            <input type="hidden" name="weight" id="weight" value="0">
+                                            <input class="form-control" type="number" id="qty" name="qty" value="1" min="1" max="12"> 
+                                            <br>
+                                            <button class="btn btn-danger"
+                                               type="submit">
+                                            {{__('Agragar al carrito')}}
                                             </button>
-
                                         </form>
 
 
@@ -470,20 +432,18 @@
                                             <h5 class="card-title">$25.00</h5>
                                             <p class="card-text">Descripción</p>
                                             <h5>Cantidad</h5>
-                                        <form action="" method="post">
-                                        <input type="hidden" name="id" id="id" value="">
-                                        <input type="hidden" name="nombre" id="nombre" value="" >
-                                        <input type="hidden" name="precio" id="precio" value="">
-                                        <input class="form-control" type="number" name="cantidad" value="1" id="cantidad" min="1" max="12">   
-                                        <br>
-                                        <button class="btn btn-danger"
-                                            name="btnAccion"
-                                            value="Agregar"
-                                            type="submit"
-                                            >
-                                            Agragar al carrito
+                                        <form action="{{url('add')}}" method="post">
+                                            @csrf
+                                            <input type="hidden" name="id" id="id" value="12">
+                                            <input type="hidden" name="name" id="name" value="CupCake de Cafe">
+                                            <input type="hidden" name="price" id="price" value="25.00">
+                                            <input type="hidden" name="weight" id="weight" value="0">
+                                            <input class="form-control" type="number" id="qty" name="qty" value="1" min="1" max="12"> 
+                                            <br>
+                                            <button class="btn btn-danger"
+                                               type="submit">
+                                            {{__('Agragar al carrito')}}
                                             </button>
-
                                         </form>
 
 
@@ -491,10 +451,8 @@
                                     </div>
                                 </div>
 
-
                             </div>
-                        -->
-                       <!--
+                       
                         <div class="row">
                                 <div class="col col-md-3">
                                     <div class="card">
@@ -510,24 +468,22 @@
                                         >
 
                                         <div class="card-body">
-                                        <span>CupCake de Leche</span>
-                                            <h5 class="card-title">$35</h5>
+                                        <span>CupCake de Vainilla</span>
+                                            <h5 class="card-title">$35.00</h5>
                                             <p class="card-text">Descripción</p>
                                             <h5>Cantidad</h5>
-                                        <form action="" method="post">
-                                        <input type="hidden" name="id" id="id" value="">
-                                        <input type="hidden" name="nombre" id="nombre" value="" >
-                                        <input type="hidden" name="precio" id="precio" value="">
-                                        <input class="form-control" type="number" name="cantidad" value="1" id="cantidad" min="1" max="12">   
-                                        <br>
-                                        <button class="btn btn-danger"
-                                            name="btnAccion"
-                                            value="Agregar"
-                                            type="submit"
-                                            >
-                                            Agragar al carrito
+                                        <form action="{{url('add')}}" method="post">
+                                            @csrf
+                                            <input type="hidden" name="id" id="id" value="13">
+                                            <input type="hidden" name="name" id="name" value="CupCake de Vainilla">
+                                            <input type="hidden" name="price" id="price" value="35.00">
+                                            <input type="hidden" name="weight" id="weight" value="0">
+                                            <input class="form-control" type="number" id="qty" name="qty" value="1" min="1" max="12"> 
+                                            <br>
+                                            <button class="btn btn-danger"
+                                               type="submit">
+                                            {{__('Agragar al carrito')}}
                                             </button>
-
                                         </form>
 
 
@@ -545,36 +501,30 @@
                                         data-toggle="popover"
                                         data-trigger="hover"
                                         data-content="Rico Cupcake de platana relleno de avena"
-                                        height="317px"
-                                        >
-
+                                        height="317px">
                                         <div class="card-body">
                                         <span>Cupcake de avena</span>
                                             <h5 class="card-title">$25.00</h5>
                                             <p class="card-text">Descripción</p>
                                             <h5>Cantidad</h5>
-                                        <form action="" method="post">
-                                        <input type="hidden" name="id" id="id" value="">
-                                        <input type="hidden" name="nombre" id="nombre" value="" >
-                                        <input type="hidden" name="precio" id="precio" value="">
-                                        <input class="form-control" type="number" name="cantidad" value="1" id="cantidad" min="1" max="12">   
-                                        <br>
-                                        <button class="btn btn-danger"
-                                            name="btnAccion"
-                                            value="Agregar"
-                                            type="submit"
-                                            >
-                                            Agragar al carrito
+                                        <form action="{{url('add')}}" method="post">
+                                            @csrf
+                                            <input type="hidden" name="id" id="id" value="14">
+                                            <input type="hidden" name="name" id="name" value="Cupcake de avena">
+                                            <input type="hidden" name="price" id="price" value="25.00">
+                                            <input type="hidden" name="weight" id="weight" value="0">
+                                            <input class="form-control" type="number" id="qty" name="qty" value="1" min="1" max="12"> 
+                                            <br>
+                                            <button class="btn btn-danger"
+                                               type="submit">
+                                            {{__('Agragar al carrito')}}
                                             </button>
-
                                         </form>
-
-
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                         -->                
+                                       
                 </section>
             </div>
         </div>
