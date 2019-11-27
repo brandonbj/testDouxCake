@@ -41,8 +41,7 @@ class PedidoController extends Controller
     }
      public function delete(Request $r)
     {
-        Cart::remove($request->id);
-        redirect('/pedido');
+        Cart::remove($r->id);
     }
 
     public function getitem(Request $request){
@@ -92,6 +91,5 @@ class PedidoController extends Controller
     public function destroy(Request $r)
     {
         Cart::remove($request->id);
-        redirect('/pedido');
     }
 }

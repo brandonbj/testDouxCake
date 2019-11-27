@@ -8,7 +8,13 @@
             <div class="col-lg-12">
 <!-- Seccion de tarjetas -->
                <section class="post-content-area single-post-area" style="background-color: transparent;">
-                    <div class="row">
+                    @if(Session::has('flash_message'))
+                        <div class="alert alert-success">
+                           {{Session::get('flash_message')}}
+                            <a href="{{route('pedido.index')}}" class="badge badge-success">Ver carrito</a>
+                        </div>
+                    @endif
+                       <div class="row">
                         <div class="col col-md-3">
                             <div class="card">
                             <img 
@@ -26,21 +32,20 @@
                                 <h5 class="card-title">$50.00</h5>
                                 <p class="card-text">Descripción</p>
                                 <h5>Cantidad</h5>
-                                <form action="{{url('pedidos')}}" method="post">
+                                <form action="{{url('add')}}" method="post">
                                 @csrf
                                 <input type="hidden" name="id" id="id" value="1">
-                                <input type="hidden" name="name" id="name" value="cupTest" >
-                                <input type="hidden" name="price" id="price" value="50">
+                                <input type="hidden" name="name" id="name" value="CupCake de Leche" >
+                                <input type="hidden" name="price" id="price" value="50.00">
+                                <input type="hidden" name="weight" id="weight" value="0">
                                 <input class="form-control" type="number" id="qty" name="qty" value="1" min="1" max="12"> 
                                 <br>
                                 <button class="btn btn-danger"
-                                    type="submit"
+                                   type="submit"
                                     >
-                                    Agragar al carrito
+                                    {{__('Agragar al carrito')}}
                                     </button>
                                 </form>
-
-
                                 </div>
                             </div>
                         </div>
