@@ -1150,6 +1150,56 @@ h2{
     background-image: linear-gradient( #D69EFF, #6A00B9);
     border-radius: 8px;
 }
-#carouselExampleIndicators {
-  
+#btnprimary{
+  background-color: #FF6699;
+  border-bottom-color: #CC6699;
+  color: #fff;
+  font-size: 15px
+}
+/*=========================================================
+	OWL THEME
+===========================================================*/
+
+/*----------------------------*\
+	owl nav
+\*----------------------------*/
+
+.owl-theme .owl-nav [class*='owl-'] {
+  color: #FFF;
+  background: transparent;
+  padding: 0px;
+  width: 90px;
+  height: 90px;
+  line-height: 90px;
+  font-size: 26px;
+  margin: 0;
+  border-radius: 50%;
+  -webkit-transition: 0.3s all;
+  transition: 0.3s all;
+}
+
+.owl-theme .owl-nav [class*='owl-']:hover {
+  background: #83ba09;
+}
+
+/*----------------------------*\
+	owl dots
+\*----------------------------*/
+
+.owl-theme .owl-dots .owl-dot span {
+  border: 1px solid #FFF;
+  background: transparent;
+  -webkit-transition: 0.2s all;
+  transition: 0.2s all;
+}
+
+.owl-theme .owl-dots .owl-dot:hover span {
+  border-color: #83ba09;
+  background: #83ba09;
+}
+
+.owl-theme .owl-dots .owl-dot.active span {
+  width: 20px;
+  border-color: #83ba09;
+  background: #83ba09;
 }

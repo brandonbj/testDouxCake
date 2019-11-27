@@ -14,18 +14,19 @@
                             <a href="{{route('pedido.index')}}" class="badge badge-success">Ver carrito</a>
                         </div>
                     @endif
-                       <div class="row">
+                       <div class="row" style="margin: 15px;">
                         <div class="col col-md-3">
                             <div class="card">
                             <img 
                                 title="CupCake de Leche"
                                 alt="CupCake de Leche"
-                                class="card-img-top"    
+                                class="img-fluid"    
                                 src="images/imagenes cupcake/leche5.jpg"
                                 data-toggle="popover"
                                 data-trigger="hover"
                                 data-content="Cupkake con extra leche convinada con galleta"
-                                height="317px"
+                                height="auto"
+                                width="auto"
                                 >
                                 <div class="card-body">
                                 <span>CupCake de Leche</span>
@@ -40,7 +41,7 @@
                                 <input type="hidden" name="weight" id="weight" value="0">
                                 <input class="form-control" type="number" id="qty" name="qty" value="1" min="1" max="12"> 
                                 <br>
-                                <button class="btn btn-danger"
+                                <button class="genric-btn default circle" id="btnprimary"
                                    type="submit"
                                     >
                                     {{__('Agragar al carrito')}}
@@ -56,12 +57,13 @@
                             <img 
                                 title="Cupcake de platano"
                                 alt="Cupcake de platano"
-                                class="card-img-top"    
+                                class="img-fluid"    
                                 src="images/imagenes cupcake/plata.jpg"
                                 data-toggle="popover"
                                 data-trigger="hover"
                                 data-content="Rico Cupcake de platano relleno del mismo... para saborear"
-                                height="317px"
+                                height="auto"
+                                width="auto"
                                 >
 
                                 <div class="card-body">
@@ -77,7 +79,7 @@
                                 <input type="hidden" name="weight" id="weight" value="0">
                                 <input class="form-control" type="number" id="qty" name="qty" value="1" min="1" max="12"> 
                                 <br>
-                                <button class="btn btn-danger"
+                                <button class="genric-btn default circle" id="btnprimary"
                                    type="submit"
                                     >
                                     {{__('Agragar al carrito')}}
@@ -93,12 +95,13 @@
                             <img 
                                 title="CupCake de Arandano"
                                 alt="CupCake de Arandano"
-                                class="card-img-top"    
+                                class="img-fluid"    
                                 src="images/imagenes cupcake/ara6.jpg"
                                 data-toggle="popover"
                                 data-trigger="hover"
                                 data-content="Rico Cupcake de sabor arandano"
-                                height="317px"
+                                height="auto"
+                                width="auto"
                                 >
 
                                 <div class="card-body">
@@ -114,7 +117,7 @@
                                 <input type="hidden" name="weight" id="weight" value="0">
                                 <input class="form-control" type="number" id="qty" name="qty" value="1" min="1" max="12"> 
                                 <br>
-                                <button class="btn btn-danger"
+                                <button class="genric-btn default circle" id="btnprimary"
                                    type="submit"
                                     >
                                     {{__('Agragar al carrito')}}
@@ -132,7 +135,7 @@
                             <img 
                                 title="CupCake sabor Oreo"
                                 alt="CupCake sabor Oreo"
-                                class="card-img-top"    
+                                class="img-fluid"    
                                 src="images/imagenes cupcake/oreo8.jpg"
                                 data-toggle="popover"
                                 data-trigger="hover"
@@ -151,7 +154,7 @@
                                 <input type="hidden" name="weight" id="weight" value="0">
                                 <input class="form-control" type="number" id="qty" name="qty" value="1" min="1" max="12"> 
                                 <br>
-                                <button class="btn btn-danger"
+                                <button class="genric-btn default circle" id="btnprimary"
                                    type="submit"
                                     >
                                     {{__('Agragar al carrito')}}
@@ -163,13 +166,13 @@
                     </div>
                     <!-- La si se quiere obtener la imagen desde la base de datos en bits es : src="data:image/jpg;base64, (php base64_encode($producto['Imagen']);) "  --> 
                         
-                        <div class="row">
+                        <div class="row" style="margin: 15px;">
                                 <div class="col col-md-3">
                                     <div class="card">
                                         <img 
                                         title="CupCake de fresa"
                                         alt="CupCake de fresa"
-                                        class="card-img-top"    
+                                        class="img-fluid"    
                                         src="images/imagenes cupcake/fresa1.jpg"
                                         data-toggle="popover"
                                         data-trigger="hover"
@@ -188,7 +191,7 @@
                                             <input type="hidden" name="weight" id="weight" value="0">
                                             <input class="form-control" type="number" id="qty" name="qty" value="1" min="1" max="12"> 
                                             <br>
-                                            <button class="btn btn-danger"
+                                            <button class="genric-btn default circle" id="btnprimary"
                                                type="submit">
                                             {{__('Agragar al carrito')}}
                                             </button>
@@ -203,7 +206,7 @@
                                     <img 
                                         title="Cupcake de platano"
                                         alt="Cupcake de platano"
-                                        class="card-img-top"    
+                                        class="img-fluid"    
                                         src="images/imagenes cupcake/turron3.jpg"
                                         data-toggle="popover"
                                         data-trigger="hover"
@@ -222,7 +225,7 @@
                                             <input type="hidden" name="weight" id="weight" value="0">
                                             <input class="form-control" type="number" id="qty" name="qty" value="1" min="1" max="12"> 
                                             <br>
-                                            <button class="btn btn-danger"
+                                            <button class="genric-btn default circle" id="btnprimary"
                                                type="submit">
                                             {{__('Agragar al carrito')}}
                                             </button>
@@ -236,7 +239,7 @@
                                     <img 
                                         title="CupCake de Nata"
                                         alt="CupCake de Nata"
-                                        class="card-img-top"    
+                                        class="img-fluid"    
                                         src="images/imagenes cupcake/nata5.jpg"
                                         data-toggle="popover"
                                         data-trigger="hover"
@@ -255,7 +258,7 @@
                                             <input type="hidden" name="weight" id="weight" value="0">
                                             <input class="form-control" type="number" id="qty" name="qty" value="1" min="1" max="12"> 
                                             <br>
-                                            <button class="btn btn-danger"
+                                            <button class="genric-btn default circle" id="btnprimary"
                                                type="submit">
                                             {{__('Agragar al carrito')}}
                                             </button>
@@ -269,7 +272,7 @@
                                         <img 
                                         title="CupCake de Chocolate"
                                         alt="CupCake de Chocolate"
-                                        class="card-img-top"    
+                                        class="img-fluid"    
                                         src="images/imagenes cupcake/cupchocolate4.jpg"
                                         data-toggle="popover"
                                         data-trigger="hover"
@@ -290,7 +293,7 @@
                                             <input type="hidden" name="weight" id="weight" value="0">
                                             <input class="form-control" type="number" id="qty" name="qty" value="1" min="1" max="12"> 
                                             <br>
-                                            <button class="btn btn-danger"
+                                            <button class="genric-btn default circle" id="btnprimary"
                                                type="submit">
                                             {{__('Agragar al carrito')}}
                                             </button>
@@ -302,13 +305,13 @@
                             </div>
                        
                           
-                        <div class="row">
+                        <div class="row" style="margin: 15px;">
                                 <div class="col col-md-3">
                                     <div class="card">
                                     <img 
                                         title="CupCake vegano"
                                         alt="CupCake vegano"
-                                        class="card-img-top"    
+                                        class="img-fluid"    
                                         src="images/imagenes cupcake/vega3.jpg"
                                         data-toggle="popover"
                                         data-trigger="hover"
@@ -329,7 +332,7 @@
                                             <input type="hidden" name="weight" id="weight" value="0">
                                             <input class="form-control" type="number" id="qty" name="qty" value="1" min="1" max="12"> 
                                             <br>
-                                            <button class="btn btn-danger"
+                                            <button class="genric-btn default circle" id="btnprimary"
                                                type="submit">
                                             {{__('Agragar al carrito')}}
                                             </button>
@@ -345,7 +348,7 @@
                                     <img 
                                         title="Cupcake de zanahoria"
                                         alt="Cupcake de zanahoria"
-                                        class="card-img-top"    
+                                        class="img-fluid"    
                                         src="images/imagenes cupcake/zanahoria3.jpg"
                                         data-toggle="popover"
                                         data-trigger="hover"
@@ -366,7 +369,7 @@
                                             <input type="hidden" name="weight" id="weight" value="0">
                                             <input class="form-control" type="number" id="qty" name="qty" value="1" min="1" max="12"> 
                                             <br>
-                                            <button class="btn btn-danger"
+                                            <button class="genric-btn default circle" id="btnprimary"
                                                type="submit">
                                             {{__('Agragar al carrito')}}
                                             </button>
@@ -382,7 +385,7 @@
                                     <img 
                                         title="CupCake de redvelvet"
                                         alt="CupCake de redvelvet"
-                                        class="card-img-top"    
+                                        class="img-fluid"    
                                         src="images/imagenes cupcake/red2.png"
                                         data-toggle="popover"
                                         data-trigger="hover"
@@ -403,7 +406,7 @@
                                             <input type="hidden" name="weight" id="weight" value="0">
                                             <input class="form-control" type="number" id="qty" name="qty" value="1" min="1" max="12"> 
                                             <br>
-                                            <button class="btn btn-danger"
+                                            <button class="genric-btn default circle" id="btnprimary"
                                                type="submit">
                                             {{__('Agragar al carrito')}}
                                             </button>
@@ -419,7 +422,7 @@
                                     <img 
                                         title="CupCake de Cafe"
                                         alt="CupCake de Cafe"
-                                        class="card-img-top"    
+                                        class="img-fluid"    
                                         src="images/imagenes cupcake/cafe3.jpg"
                                         data-toggle="popover"
                                         data-trigger="hover"
@@ -440,7 +443,7 @@
                                             <input type="hidden" name="weight" id="weight" value="0">
                                             <input class="form-control" type="number" id="qty" name="qty" value="1" min="1" max="12"> 
                                             <br>
-                                            <button class="btn btn-danger"
+                                            <button class="genric-btn default circle" id="btnprimary"
                                                type="submit">
                                             {{__('Agragar al carrito')}}
                                             </button>
@@ -453,13 +456,13 @@
 
                             </div>
                        
-                        <div class="row">
+                        <div class="row" style="margin: 15px;">
                                 <div class="col col-md-3">
                                     <div class="card">
                                     <img 
                                         title="CupCake de Vainilla"
                                         alt="CupCake de Vainilla"
-                                        class="card-img-top"    
+                                        class="img-fluid"    
                                         src="images/imagenes cupcake/vainilla.jpg"
                                         data-toggle="popover"
                                         data-trigger="hover"
@@ -480,7 +483,7 @@
                                             <input type="hidden" name="weight" id="weight" value="0">
                                             <input class="form-control" type="number" id="qty" name="qty" value="1" min="1" max="12"> 
                                             <br>
-                                            <button class="btn btn-danger"
+                                            <button class="genric-btn default circle" id="btnprimary"
                                                type="submit">
                                             {{__('Agragar al carrito')}}
                                             </button>
@@ -496,7 +499,7 @@
                                     <img 
                                         title="Cupcake de Avena"
                                         alt="Cupcake de Avena"
-                                        class="card-img-top"    
+                                        class="img-fluid"    
                                         src="images/imagenes cupcake/ave3.jpg"
                                         data-toggle="popover"
                                         data-trigger="hover"
@@ -515,7 +518,7 @@
                                             <input type="hidden" name="weight" id="weight" value="0">
                                             <input class="form-control" type="number" id="qty" name="qty" value="1" min="1" max="12"> 
                                             <br>
-                                            <button class="btn btn-danger"
+                                            <button class="genric-btn default circle" id="btnprimary"
                                                type="submit">
                                             {{__('Agragar al carrito')}}
                                             </button>
